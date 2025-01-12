@@ -1,0 +1,107 @@
+.btn{
+    padding: 12px 50px 16px 50px;
+    width: 245px;
+    height: 54px;
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--black);
+    line-height: 100%;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out ;
+
+    @include tablet {
+      padding: 10px 24px 14px 24px;
+      width: 171px;
+      height: 46px;
+      font-size: 22px;
+    }
+
+    &:active {
+      background-color: var(--violet);
+    }
+  }
+  .btn-primary {
+    @include button-styles(
+    var(--yellow),
+    var(--black),
+    var(--yellow),
+    transparent,
+    var(--yellow),
+    var(--yellow))
+  }
+  .btn-secondary {
+    @include button-styles(
+      var(--black),
+      var(--yellow),
+      var(--black),
+      transparent,
+      var(--black),
+      var(--black))
+  }
+  .btn-violet{
+    @include button-styles(
+      var(--violet),
+      var(--black),
+      var(--violet),
+      transparent,
+      var(--violet),
+      var(--violet))
+  }
+  .btn-black{
+    @include button-styles(
+      var(--black),
+      var(--white),
+      var(--black),
+      transparent,
+      var(--black),
+      var(--black))
+  }
+
+  .btn-orange{
+    @include button-styles(
+      var(--orange),
+      var(--black),
+      var(--orange),
+      transparent,
+      var(--orange),
+      var(--orange))
+  }
+  .btn-blue{
+    @include button-styles(
+      var(--blue),
+      var(--black),
+      var(--blue),
+      transparent,
+      var(--blue),
+      var(--blue))
+  }
+  .btn-green{
+    @include button-styles(
+      var(--green),
+      var(--black),
+      var(--green),
+      transparent,
+      var(--green),
+      var(--green))
+  }
+
+  .btn-rounded{
+    border-radius: 100px;
+    padding: 8px 14px 12px 14px;
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    cursor: pointer;
+
+    @include tablet{
+      font-size: 16px;
+    }
+    @include mobile{
+      font-size: 14px;
+    }
+  }
+
+

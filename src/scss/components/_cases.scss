@@ -1,0 +1,180 @@
+.cases {
+  display: none;
+  &__subtitle {
+    margin-bottom: 60px;
+
+    @include mobile{
+      margin-bottom: 40px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__grid {
+    padding-top: 40px;
+    padding-bottom: 63px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 20px;
+    grid-template-areas:
+    "button button button button button button button button button button"
+    "descr descr descr descr text text text img1 img1 img1";
+    border-top: 1px solid var(--grey-dark);
+
+    &:last-of-type{
+        border-bottom: 1px solid var(--grey-dark);
+    }
+    @include big-desktop {
+      min-width: 0;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas:
+        "button button button button img1 img1"
+        "descr descr descr descr img2 img2"
+        "text text text text img2 img2"
+        "link link link link link link"
+    }
+
+    @include mobile{
+      padding-top: 40px;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-areas:
+        "button button button button img1"
+        "descr descr descr descr descr"
+        "text text text text text"
+        "link link link link link "
+    }
+  }
+
+  &__btn {
+    grid-area: button;
+    max-width: 310px;
+    height: 38px;
+    width: fit-content;
+    @include big-desktop {
+      margin-bottom: 60px;
+    }
+    @include mobile{
+      margin-bottom: 40px;
+      // max-width: 240px;
+      font-size: var(--font-size-sm-s);
+    }
+  }
+
+  &__descr {
+    grid-area: descr;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    flex-grow: 1;
+
+    @include big-desktop{
+      max-width: 640px;
+    }
+    @include small-tablet{
+      font-size: var(--font-size-small);
+    }
+    @include mobile {
+      line-height: 110%;
+      font-size: var(--font-size-sm);
+    }
+  }
+
+  &__text {
+    margin: 0;
+    grid-area: text;
+    flex-grow: 1;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 140%;
+    color: var(--grey);
+
+    @include big-desktop{
+      max-width: 640px;
+    }
+    @include small-tablet{
+      font-size: var(--font-size-sm-l);
+    }
+    @include mobile{
+      font-size: var(--font-size-sm-m);
+    }
+  }
+
+  &__logo {
+    grid-area: img1;
+    padding-left: 40px;
+    justify-self: start;
+    @include big-desktop{
+      padding-left: 0;
+      justify-self: end;
+    }
+    @include mobile{
+      max-width: 100px;
+    }
+  }
+
+  &__image {
+    display: none;
+    grid-area: img2;
+
+    @include big-desktop{
+      display: flex;
+      align-items: center;
+      max-width: 100%;
+      height: auto;
+
+      align-self: start;
+    }
+    @include small-tablet{
+      align-self: start;
+      justify-self: end;
+    }
+    @include mobile{
+      display: none;
+    }
+  }
+  &__icon{
+    width: 77px;
+    height: auto;
+    fill: #676767;
+
+    &--avion{
+      height: 54px;
+    }
+    &--mvideo{
+      height: 50px;
+    }
+    &--dtek{
+      height: 27px;
+    }
+  }
+  &__img{
+    width: 100%;
+    height: auto;
+  }
+  &__link{
+    grid-area: link;
+    display: none;
+    @include big-desktop{
+      margin-top: 65px;
+      display: grid;
+      width: auto;
+      justify-self: start;
+    }
+    @include mobile{
+      margin-top: 40px;
+      font-size: var(--font-size-sm-x);
+    }
+  }
+  &__button{
+    width: fit-content;
+    margin-top: 60px;
+    @include small-tablet{
+      margin-top: 40px;
+    }
+  }
+}

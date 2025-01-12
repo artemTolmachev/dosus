@@ -1,0 +1,27 @@
+@mixin button-styles(
+  $bg-color,
+  $text-color,
+  $border-color,
+  $hover-bg,
+  $hover-border: $hover-bg,
+  $hover-text
+  ){
+  background-color: $bg-color;
+  color: $text-color;
+  border: 1px solid $border-color;
+
+  @media (any-hover: hover){
+    &:hover {
+      background-color: $hover-bg;
+      border-color: $hover-border;
+      color: $hover-text;
+    }
+  }
+  &:focus-visible{
+    @include focus-outline(var(--yellow), var(--outline-offset));
+  }
+}
+
+
+
+

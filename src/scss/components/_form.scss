@@ -1,0 +1,136 @@
+.form {
+  position: relative;
+  padding-top: 68px;
+  max-width: 892px;
+
+
+  @include mobile{
+    padding-top: 54px;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    @include mobile{
+      gap: 20px;
+    }
+  }
+
+  &__group {
+    display: flex;
+    gap: 28px;
+
+    @include small-tablet{
+     flex-direction: column;
+      }
+  }
+
+  &__input {
+    height: 56px;
+    width: 100%;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 100%;
+    color: var(--grey);
+    background-color: #141414;
+
+    transition: all 0.3s ease;
+
+    @include small-tablet{
+      height: 54px;
+      font-size: var(--font-size-sm);
+    }
+    @include mobile{
+      height: 50px;
+      font-size: var(--font-size-sm-x);
+    }
+  }
+
+  .input-wrapper {
+    position: relative;
+    flex-grow: 1;
+  }
+
+  .fake-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(15px, 50%);
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 100%;
+    color: var(--grey-dark);
+    transition: all 0.3s ease;
+    pointer-events: none;
+
+    @include small-tablet{
+      top: 3px;
+      font-size: var(--font-size-sm);
+    }
+
+    @include mobile{
+      top: 3px;
+      font-size: var(--font-size-sm-x);
+    }
+  }
+
+  .textarea {
+    height: 110px;
+  }
+
+  .fake-placeholder-active {
+    transform: translate(0, -100%);
+    font-size: 16px;
+  }
+
+  .input-active {
+    outline: none;
+    border-bottom: 1px solid var(--yellow);
+    background: transparent;
+  }
+
+  .textarea {
+    padding-top: 10px;
+  }
+
+  &__checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__btn {
+    @include mobile{
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: var(--grey-dark);
+    width: 40px;
+    height: 40px;
+
+    @include mobile{
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .custom-checkbox{
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--grey);
+  }
+  .checkbox-lable{
+    padding-left: 30px;
+  }
+}
+
+

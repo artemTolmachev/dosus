@@ -1,0 +1,200 @@
+.footer {
+  background-color: var(--pink);
+
+  &__column {
+    grid-column: span 2;
+  }
+  &__column:first-child{
+    grid-column: 1 span;
+  }
+  &__item:not(:first-child) {
+    margin-top: 14px;
+  }
+  &__link {
+  font-family: var(--font3);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 110%;
+  color: var(--black);
+
+  @include mobile{
+    font-size: 16px;
+  }
+  }
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 28px;
+    font-weight: 700;
+    font-size: var(--font-size-sm-x);
+    font-family: var(--font-family);
+    line-height: 110%;
+    color: var(--grey-dark);
+
+    @include mobile{
+      font-size: 18px;
+    }
+  }
+  .social-link{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: var(--font-size-sm-x);
+    line-height: 110%;
+    color: var(--grey-dark);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    row-gap: 60px;
+    grid-template-areas:
+        "social . . . . . examination company"
+        ". . . . . . contacts media";
+
+    @include big-tablet{
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: auto auto auto;
+      grid-gap: 20px;
+      row-gap: 60px;
+      grid-template-areas:
+      "examination examination examination company company ."
+      "media media media contacts contacts ."
+      "social social social . . . ";
+    }
+    @include mobile {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-rows: auto auto auto auto auto;
+      row-gap: 40px;
+      grid-template-areas:
+      "examination examination examination . ."
+      "company company company . ."
+      "media media media . ."
+      "contacts contacts contacts . ."
+      "social social social . . ";
+    }
+  }
+  .social-column{
+    grid-area: social;
+
+    @include big-tablet {
+      padding-top: 20px;
+    }
+  }
+  .examination-column{
+    grid-area: examination;
+  }
+  .company-column{
+    padding-left: 60px;
+    grid-area: company;
+
+    @include big-tablet{
+      padding-left: 0;
+    }
+  }
+  .contacts-column{
+    grid-area: contacts;
+  }
+  .media-column{
+    padding-left: 60px;
+    grid-area: media;
+
+    @include big-tablet{
+      padding-left: 0;
+    }
+  }
+  &__bottom{
+    margin-top: 28px;
+    display:  flex;
+    align-items: end;
+    min-height: 150px;
+
+    font-family: var(--font3);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    color: var(--black);
+
+    background-image: url(../../img/logo-bg.svg);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 60% auto;
+    gap: 50px;
+
+    @media(max-width:1200px){
+      margin-top: 80px;
+      min-height: 166px;
+      background-position: left top;
+      background-size: 56% 50%;
+    }
+    @include small-tablet{
+      background-size: 100% auto;
+    }
+    @include mobile{
+      height: 138px;
+      gap: 17px;
+      flex-direction: column;
+      align-items: start;
+      justify-content: end;
+    }
+  }
+  &__copyright{
+    margin: 0;
+    margin-left: auto;
+
+    @media(max-width:1200px){
+      margin-left: 0;
+    }
+  }
+  &__botom-text{
+    margin: 0;
+    max-width: 275px;
+
+    @media(max-width:1200px){
+      max-width: 100%;
+    }
+  }
+}
+
+// 1520px
+// @include high-desctop{
+
+// }
+
+//1440px
+// @include big-desktop{
+
+// }
+
+//1200
+// @media(max-width:1200px){
+
+// }
+
+//1025px
+// @include for-desktop{
+
+// }
+
+//1024px
+// @include big-tablet {
+
+// }
+
+//десктоп
+//992px
+// @include tablet{
+
+// }
+
+//768px
+// @include small-tablet{
+
+// }
+
+//576px
+// @include mobile{
+
+// }

@@ -1,0 +1,55 @@
+.checkbox-lable{
+  position: relative;
+}
+
+.checkbox{
+  appearance: none;
+
+  @include mobile{
+    font-size: 12px;
+  }
+}
+
+.custom-checkbox {
+  &::before,
+  &::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 24px;
+    height: 24px;
+    transform: translate(0, -50%);
+    box-sizing: border-box;
+
+    @include mobile{
+      transform: translate(0, -25%);
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &::after{
+    background-image: url('../../img/cheched.svg');
+    background-position: 50%;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    opacity: 0;
+
+    @include mobile{
+      background-size: 16px 16px;
+    }
+  }
+  &::before {
+    display: inline-block;
+    background-color: var(--grey);
+    margin-right: 10px;
+  }
+}
+
+.checkbox:checked ~ .custom-checkbox::after {
+  opacity: 1;
+}
+.checkbox:checked ~ .custom-checkbox::before {
+  outline: 1px dashed var(--yellow);
+  outline-offset: 5px;
+}

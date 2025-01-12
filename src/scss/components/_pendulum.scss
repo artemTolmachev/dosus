@@ -1,0 +1,52 @@
+.services__pendulum-wr{
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 1280px;
+  height: 1280px;
+  left: 0;
+  bottom: 100%;
+  transform: translate(-50%, 60%);
+  border-radius: 100%;
+  border: 1px solid var(--grey);
+}
+.serveces__pendulum {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+
+  transform-origin: 50% 50%; //Определяет точку, вокруг которой будет вращаться элемент.
+  animation: moveIt 6s ease-in-out;
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 110%;
+  color: var(--grey);
+}
+.serveces__image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 1200px;
+  transform: translate(0%, 3%);
+  z-index: 1;
+}
+@keyframes moveIt {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+}
+

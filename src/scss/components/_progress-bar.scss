@@ -1,0 +1,34 @@
+.progress-container{
+  position: fixed;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  right: var(--element-offset-right);
+  background-color: var(--grey-dark);
+  z-index: 100000;
+}
+.yellow-bar {
+  position: relative;
+  width: 1px;
+  background-color: var(--yellow);
+  z-index: 100000;
+}
+.draggable{
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 34px;
+  height: 34px;
+  background-color: var(--yellow);
+  transform: translate(-50%, 50%);
+  z-index: 9999;
+
+  @include small-tablet{
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.progress-hede{
+  display: none;
+}

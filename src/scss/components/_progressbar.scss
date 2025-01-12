@@ -1,0 +1,37 @@
+#progress-bar{
+  position: absolute;
+  top: -50px;
+  width: 1px;
+  right: 0;
+  background-color: var(--grey); /* Цвет совпадает с линией */
+  z-index: 9999;
+}
+
+#progress {
+  position: absolute;
+  height: var(--height);
+  width: 1px;
+  top: 0;
+  right: 0;
+  background-color: var(--yellow);
+  transition: width 0.1s linear;
+  z-index: 9999;
+
+  &::after{
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%); /* Центровка круга */
+    width: 34px;
+    height: 34px;
+    background-color: var(--yellow); /* Цвет совпадает с линией */
+    z-index: 10000;
+
+    @include mobile {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+

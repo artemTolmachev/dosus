@@ -1,0 +1,91 @@
+.burger{
+  display: none;
+  position: relative;
+  width: 46px;
+  height: 46px;
+  margin-left: 40px;
+  z-index: 10001;
+  &:focus,
+  &:focus-visible{
+    outline: none;
+  }
+  &:focus-visible{
+    @include focus-outline(var(--yellow), var(--outline-offset));
+  }
+&__line{
+  position: absolute;
+  height: 4px;
+  background-color: var(--light-color);
+  transition:  transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+  &:first-child{
+      width: 100%;
+      margin-top: -7px;
+      right: 0;
+      background-color: var(--white);
+      transform-origin: center; /* Центр вращения */
+      transition: transform 0.5s ease-in-out;
+  }
+
+  &:last-child{
+      margin-top: 7px;
+      width: 50%;
+      right: 0px;
+      transform: translateY(-50%);
+      background-color: var(--white);
+      transform-origin: center; /* Центр вращения */
+      transition: transform 0.5s ease-in-out;
+  }
+  }
+
+  @include high-desctop{
+    display: block;
+  }
+
+  @include mobile {
+    margin: 0;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.burger--active{
+  position: relative;
+  z-index: 20000;
+  margin-left: 0;
+
+  .burger__line{
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: var(--black);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+    @include mobile {
+      width: 32px;
+    }
+
+    &:first-child{
+      margin-top: unset;
+      top: 50%; /* Центр по вертикали */
+      left: 0;
+      transform: rotate(-45deg);
+    }
+
+    &:last-child{
+      margin-top: unset;
+      top: 50%; /* Центр по вертикали */
+      left: 0;
+      transform: rotate(45deg); /* Поворот вправо */
+    }
+  }
+  @include mobile {
+    width: 32px;
+    height: 32px;
+  }
+
+  &:focus-visible{
+    @include focus-outline(var(--black), var(--outline-offset));
+   }
+}
+

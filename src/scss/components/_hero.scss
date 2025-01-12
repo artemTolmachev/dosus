@@ -1,0 +1,99 @@
+.hero{
+  position: relative;
+  margin-top: -2px;
+  padding-top: 266px;
+  height: 900px;
+  padding-bottom: 80px;
+  background-image: url(../../img/gif.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+
+  @include big-desktop{
+    padding-top: 200px;
+    height: 700px;
+  }
+
+  @media(max-width: (1200px)){
+    padding-top: 150px;
+    padding-bottom: 60px;
+    height: 560px;
+  }
+  @include small-tablet{
+    padding-top: 285px;
+    height: 1024px;
+  }
+  @include mobile {
+    height: 900px;
+    padding-top: 191px;
+    padding-bottom: 29px;
+  }
+  &::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #000 0%, rgba(1, 1, 1, 0.4) 69.08%, #010101 100%);
+    z-index: 2;
+  }
+  &__descr{
+    margin: 0;
+    font-family: var(--font3);
+    max-width: 870px;
+    font-weight: 400;
+    font-size: var(--font-size-main);
+    line-height: 140%;
+    color: var(--white);
+
+    @media(max-width: (1200px)){
+      font-size: var(--font-size-medium);
+    }
+
+    @include small-tablet {
+      max-width: 620px;
+      font-size: var(--font-size-small);
+      line-height: 130%;
+
+    }
+
+    @include mobile {
+      font-size: var(--font-size-mobile);
+    }
+
+  }
+  &__link{
+    margin-top: 30px;
+
+  @include tablet {
+    margin-top: 24px;
+  }
+  }
+  &__container{
+    position: relative;
+    height: 100%;
+    z-index: 3;
+  }
+
+  .swiper__content{
+    height: 100%;
+
+  }
+  .swiper-pagination{
+    text-align: start;
+
+    &-bullet{
+      margin-top: 20px;
+      width: 100px;
+      height: 4px;
+      background-color: rgb(241, 241, 241);
+      border-radius: 0;
+
+      @include mobile {
+        width: 60px;
+      }
+    }
+  }
+}

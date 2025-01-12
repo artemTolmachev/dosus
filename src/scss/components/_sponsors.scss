@@ -1,0 +1,91 @@
+.sponsors{
+  &__content {
+    position: relative;
+    background-color: var(--white);
+    overflow: hidden;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      height: 100%;
+      width: 25%;
+      z-index: 1;
+    }
+    &::before {
+      content: "Партнеры:";
+
+
+      left: 0;
+      background: linear-gradient(to right, #fff 0%, #0000 100%);
+      @include high-desctop{
+        font-size: var(--font-size-sm-x2);
+      }
+      @media(max-width:1200px){
+        top: 0;
+        left: 0;
+        font-size: 26px;
+      }
+    }
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, #fff 0%, #0000 100%);
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include big-desktop{
+      justify-content: unset;
+      gap: 30px;
+    }
+
+    @media (max-width: 1200px){
+      max-width: unset;
+      width: 1200px;
+      overflow: visible;
+    }
+    @include mobile{
+      gap: 20px;
+    }
+  }
+  &__subtitle{
+    margin: 0;
+    position: absolute;
+    top: 0;
+    transform: translateY(50%);
+    left: var(--container-current-offset);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: var(--font-size-small);
+    line-height: 110%;
+    color: #7d7d7d;
+
+    @media(max-width:1200px){
+      font-size: 26px;
+    }
+  }
+  &__content {
+    padding: 85px 0;
+  }
+  &__item {
+    max-width: 244px;
+
+    @media (width: 1200px){
+      flex: 0 0 auto;
+    }
+    @include tablet {
+      max-width: 162px;
+    }
+
+  }
+  &__img {
+    width: 100%;
+  }
+}
+
+
+

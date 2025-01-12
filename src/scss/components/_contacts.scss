@@ -1,0 +1,129 @@
+.contacts {
+  &__wrapper {
+    display: flex;
+
+    @media(max-width:1200px){
+      flex-direction: column;
+    }
+  }
+  &__form-sub {
+    margin: 0;
+    margin-bottom: 130px;
+    color: var(--yellow);
+
+    @include small-tablet{
+      margin-bottom: 60px;
+    }
+  }
+  &__subtitle{
+    margin-bottom: 80px;
+
+    @include small-tablet{
+      margin-bottom: 40px;
+    }
+  }
+  &__content {
+    width: 30%;
+    max-width: 517px;
+
+    @media(max-width:1200px){
+      margin-top: 60px;
+      width: 100%;
+      order: 2;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column; /* Выравнивает элементы ul в колонку */
+  }
+  &__item {
+    display: flex;
+    flex-direction: column; /* Располагает дочерние элементы вертикально */
+    gap: 5px;
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 140%;
+    color: var(--grey-dark);
+
+    @include small-tablet{
+      font-size: var(--font-size-sm-l);
+    }
+    @include mobile{
+      margin-bottom: 30px;
+      font-size: var(--font-size-sm-x);
+    }
+  }
+  &__item:not(:last-child){
+    margin-bottom: 40px;
+  }
+
+
+  &__link {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: var(--font-size-sm);
+    line-height: 140%;
+    color: var(--grey);
+  }
+  &__adress{
+    color: var(--white);
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    color: var(--grey);
+  }
+
+  &__form{
+    order: 1;
+  }
+
+
+}
+
+
+
+// 1520px
+// @include high-desctop{
+
+// }
+
+//1440px
+// @include big-desktop{
+
+// }
+
+//1200
+// @media(max-width:1200px){
+
+// }
+
+//1025px
+// @include for-desktop{
+
+// }
+
+//1024px
+// @include big-tablet {
+
+// }
+
+//десктоп
+//992px
+// @include tablet{
+
+// }
+
+//768px
+// @include small-tablet{
+
+// }
+
+//576px
+// @include mobile{
+
+// }
+
+

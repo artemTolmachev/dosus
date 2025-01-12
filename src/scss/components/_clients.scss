@@ -1,0 +1,59 @@
+.clients {
+  &__cover{
+    position: relative;
+    width: 100%;
+    background-color: var(--white);
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      height: 100%;
+      width: 25%;
+      z-index: 1;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(to right, #fff 0%, #0000 100%);
+    }
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, #fff 0%, #0000 100%);
+    }
+  }
+
+  &__slider {
+    position: relative;
+    width: 100%;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  &__brends {
+    width: var(--total-logo-width);
+    display: flex;
+    animation: slideLeft 14s linear infinite;
+  }
+
+  &__item {
+    width: var(--logo-width);
+    font-size: 2rem;
+    align-items: center;
+    margin-left: 3rem;
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
+
+@keyframes slideLeft{
+  100% {
+    transform: translateX(calc(-100% / 2));
+  }
+}
+

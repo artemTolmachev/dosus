@@ -1,0 +1,52 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --total-brends: 8;
+  --logo-width: 12rem;
+  --total-logo-width: calc(var(--total-brends) * var(--logo-width) * 3);
+
+  --content-width: 1760px;
+  --container-offset: 80px;
+  --container-offset-mobile: 30px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+
+  // colors
+  --grey: #d9d9d9;
+	--black: #000;
+	--white: #fff;
+	--yellow: #ffe500;
+	--pink: #ffc9dc;
+	--blue: #615aff;
+	--grey-dark: #565656;
+	--orange: #f55301;
+	--green: #57c984;
+	--violet: #a880d7;
+	--light-blue: #92cfff;
+
+  //fonts
+  --font-family: "OrdinaWideBd", sans-serif;
+  --second-family: "OrdinaRegular", sans-serif;
+  --third-family: "OrdinaBd", sans-serif;
+  --font3: "OrdinaWide", sans-serif;
+
+  --font-size-main: 48px;
+  --font-size-mobile: 28px;
+  --font-size-medium: 42px;
+  --font-size-small: 32px;
+  --font-size-sm-x2: 28px;
+  --font-size-sm: 24px;
+  --font-size-sm-l: 22px;
+  --font-size-sm-x: 20px;
+  --font-size-sm-m: 18px;
+  --font-size-sm-s: 14px;
+
+  --main-trs: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  --outline-offset: 2px;
+  --outline: var(--outline-offset) dashed currentColor;
+
+// progress-bar
+--height: 20%;
+}
+

@@ -1,0 +1,80 @@
+/* stylelint-disable */
+@mixin high-desctop {
+  @media (max-width: (1520px)){
+    @content;
+  }
+}
+@mixin big-desktop {
+  @media (max-width: (1440px)) {
+    @content;
+  }
+}
+@mixin for-desktop {
+  @media (min-width: (1025px)) {
+    @content;
+  }
+}
+
+@mixin big-tablet  {
+  @media (max-width: (1024px)) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: (992px)) {
+    @content;
+  }
+}
+
+@mixin small-tablet {
+  @media (max-width: (768px)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: (576px)) {
+    @content;
+  }
+}
+// 1520px
+// @include high-desctop{
+
+// }
+
+//1440px
+// @include big-desktop{
+
+// }
+
+//1200
+// @media(max-width:1200px){
+
+// }
+
+//1025px
+// @include for-desktop{
+
+// }
+
+//1024px
+// @include big-tablet {
+
+// }
+
+//десктоп
+//992px
+// @include tablet{
+
+// }
+
+//768px
+// @include small-tablet{
+
+// }
+
+//576px
+// @include mobile{
+
+// }
+
