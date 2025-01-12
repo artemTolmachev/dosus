@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>MaxGraph New Site</title>
+  <link rel="preload" href="fonts/OrdinaWide.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/JostBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+
+</head>
+
+<body class="page__body items">
+  <div class="progress-container">
+  <div class="yellow-bar">
+    <div class="draggable"></div>
+  </div>
+</div>
+
+  <div class="site-container items">
+    <header class="header fixed-block item main">
+  <div class="header__container container">
+    <a href="#" class="logo">
+      <svg class="logo__svg" width="224" height="32" viewBox="0 0 224 32" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M146 20.2129H150.113C150.323 24.7105 153.613 26.688 160.56 26.688C166.563 26.688 169.835 25.2005 169.835 21.9804C169.835 13.4053 147.05 21.2279 147.26 8.52267C147.4 2.53755 152.51 0 160.175 0C168.54 0 173.038 3.01006 173.353 9.25768H169.275C168.82 5.49511 165.775 4.14758 160.053 4.14758C155.258 4.14758 151.688 5.0926 151.67 8.26016C151.583 16.4328 174.263 9.29268 174.263 21.8404C174.263 28.0181 169.153 30.8531 160.315 30.8531C150.708 30.8356 146.438 27.423 146 20.2129Z" />
+        <path
+          d="M54.4328 26.7405C62.6405 26.7405 66.4031 22.6804 66.4031 15.4353C66.4031 8.19016 62.6405 4.13008 54.4328 4.13008C46.2252 4.13008 42.4101 8.15516 42.4101 15.4353C42.4101 22.7154 46.2252 26.7405 54.4328 26.7405ZM38 15.4353C38 5.72261 43.5301 0 54.4328 0C65.3355 0 70.8306 5.74011 70.8306 15.4353C70.8306 25.1305 65.3005 30.8706 54.3978 30.8706C43.4601 30.8356 38 25.113 38 15.4353Z" />
+        <path
+          d="M17.6128 26.008C25.488 26.008 28.0955 21.9829 28.0955 15.5953C28.0955 9.20766 25.4705 5.18258 17.6128 5.18258H7.13008V26.0255H17.6128V26.008ZM3 1H17.6128C28.4105 1 32.5231 6.65261 32.5231 15.5953C32.5231 24.5205 28.4105 30.1906 17.6128 30.1906H3V1Z" />
+        <path
+          d="M90.6128 26.008C98.488 26.008 101.095 21.9829 101.095 15.5953C101.095 9.20766 98.4705 5.18258 90.6128 5.18258H80.1301V26.0255H90.6128V26.008ZM76 1H90.6128C101.411 1 105.523 6.65261 105.523 15.5953C105.523 24.5205 101.411 30.1906 90.6128 30.1906H76V1Z" />
+        <path
+          d="M111 19.0604V1H115.113V18.8328C115.113 23.6279 118.14 26.9005 125.665 26.9005C133.19 26.9005 136.113 23.6279 136.113 18.8328V1H140.226V19.0604C140.226 26.3755 135.675 31.0306 125.578 31.0306C115.603 30.9956 111 26.3405 111 19.0604Z" />
+        <path d="M185.441 1.09199L182.533 4L210.091 31.558L212.999 28.65L185.441 1.09199Z" />
+        <path d="M210.085 10.3232L200.408 20L203.316 22.908L212.993 13.2312L210.085 10.3232Z" />
+        <path d="M192.218 10.3232L182.541 20L185.449 22.908L195.126 13.2312L192.218 10.3232Z" />
+      </svg>
+    </a>
+    <nav class="nav" title="Main menu">
+      <div class="leng-toggle">
+        <div class="leng-toggle__item" aria-selected="true">
+          EN
+        </div>
+        <div class="leng-toggle__item">
+          RU
+        </div>
+      </div>
+      <ul class="nav__list list-reset">
+        <li class="nav__item">
+          <a href="#" class="nav__link" data-menu-item data-lang="header__link-1"></a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link" data-scroll data-menu-item data-lang="header__link-2"></a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link" data-scroll data-menu-item data-lang="header__link-3"></a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link" data-scroll data-menu-item data-lang="header__link-4"></a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link" data-scroll data-menu-item data-lang="header__link-5"></a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link" data-scroll data-menu-item data-lang="header__link-6"></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__right">
+      <button class="header__search  btn-reset" data-graph-path="header-search">
+        <img src="img/search.svg" alt="search icon">
+      </button>
+      <div class="select select-header" role="combobox" aria-haspopup="listbox" aria-expanded="false"
+        aria-labelledby="select-label">
+        <button class="select__head btn-reset" id="select-label" data-lang="current-sel">EN</button>
+        <div class="select__body" role="listbox" tabindex="-1">
+          <button class="select__item btn-reset" role="option" data-btn="en">EN</button>
+          <button class="select__item btn-reset" role="option" data-btn="ru">RU</button>
+        </div>
+      </div>
+      <button class="header__btn btn btn-reset btn-primary" data-lang="header__text"></button>
+      <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+    <div class="mobile-menu" title="mobile menu" data-menu>
+  <nav class="mobile-nav" >
+    <div class="mobile-nav__container container">
+      <ul class="mobile-nav__list list-reset">
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link" data-menu-item data-lang="mobile-nav__link-1">Сервис</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link" data-scroll data-menu-item data-lang="mobile-nav__link-2">Компания</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link" data-scroll data-menu-item data-lang="mobile-nav__link-3">Кейсы</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link" data-scroll data-menu-item data-lang="mobile-nav__link-4">Медиацентр</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link" data-scroll data-menu-item data-lang="mobile-nav__link-5">Каръера</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link" data-scroll data-menu-item data-lang="mobile-nav__link-6">Контакты</a>
+        </li>
+      </ul>
+      <button class="btn mobile-nav__btn btn-reset btn-secondary" data-lang="mobile-nav__btn-1">Связаться</button>
+    </div>
+  </nav>
+</div>
+
+    <main class="main">
+      <section class="hero item">
+  <div class="container hero__container">
+    <div class="swiper swiper__content">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="hero__text">
+            <p class="hero__descr" data-lang="slider__text-1"></p>
+              <a href="#" class="hero__link link link--yellow " data-lang="slider__link-1"></a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="hero__text">
+            <p class="hero__descr" data-lang="slider__text-2">
+              Отразили около 27,5
+              миллионов попыток кибератак
+              в 2023 году.
+            </p>
+            <a href="#" class="hero__link link link--yellow" data-lang="slider__link-2"></a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="hero__text">
+            <p class="hero__descr" data-lang="slider__text-3">
+              Развернули и поддерживаем одну из крупнейших гибридных облаков в Белоруссии
+            </p>
+            <a href="#" class="hero__link link link--yellow" data-lang="slider__link-3"></a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="hero__text">
+            <p class="hero__descr" data-lang="slider__text-4">
+              Наши роботы инспектируют состояние электросетей.
+            </p>
+            <a href="#" class="hero__link link link--yellow" data-lang="slider__link-4">Наши роботы инспектируют состояние электросетей. </a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+      <section class="clients section-padding-bottom item">
+  <div class="clients__cover">
+    <div class="clients__container container">
+      <div class="clients__slider">
+        <div class="clients__brends">
+          <div class="clients__item">
+            <img class="clients__image" src="../img/logo-clients1.svg" alt="Логоти клиета">
+          </div>
+          <div class="clients__item">
+            <img class="clients__image" src="../img/logo-clients2.svg" alt="Логоти клиета">
+          </div>
+          <div class="clients__item">
+            <img class="clients__image" src="../img/logo-clients3.svg" alt="Логоти клиета">
+          </div>
+          <div class="clients__item">
+            <img class="clients__image" src="../img/logo-clients4.svg" alt="Логоти клиета">
+          </div>
+          <div class="clients__item">
+            <img class="clients__image" src="../img/logo-clients5.svg" alt="Логоти клиета">
+          </div>
+          <div class="clients__item">
+            <img class="clients__image" src="../img/logo-clients6.svg" alt="Логоти клиета">
+          </div>
+          <div class="clients__item">
+            <img class="clients__image" src="../img/logo-clients7.svg" alt="Логоти клиета">
+          </div>
+          <div class="clients__item">
+            <img class="clients__image" src="../img/logo-clients8.svg" alt="Логоти клиета">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="about section-padding item">
+  <div class="about__container container">
+    <div class="about__left">
+      <h2 class="about__subtitle subtitle" data-lang="about__subtitle">Ми вместе</h2>
+    </div>
+    <ul class="about__grid grid">
+       <li class="about__item list-reset">
+         <span class="about__qwontety">
+          600+
+         </span>
+        <p class="about__descr" data-lang="about__descr-1">
+          IT экспертов
+        </p>
+       </li>
+       <li class="about__item list-reset">
+        <span class="about__qwontety">
+          18+
+         </span>
+        <p class="about__descr" data-lang="about__descr-2">
+          лет опыта
+        </p>
+       </li>
+       <li class="about__item list-reset">
+        <span class="about__qwontety">
+          40+
+         </span>
+        <p class="about__descr" data-lang="about__descr-3">
+          технологических направлений
+        </p>
+       </li>
+       <li class="about__item list-reset">
+        <span class="about__qwontety">
+          400+
+         </span>
+        <p class="about__descr" data-lang="about__descr-4">
+          реализованных проектов
+        </p>
+       </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="services section-padding item">
+  <div class="services__container container">
+    <div class="services__left">
+      <h2 class="services__left-subtitle subtitle" data-lang="services__left-subtitle-1">
+        Сервисы
+      </h2>
+    </div>
+    <div class="services__right">
+      <div class="swiper swiper__servieces">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide swiper-slide--primary">
+            <h2 class="services__right-subtitle" data-lang="services__subtitle-primary">
+              Деловые приложения
+            </h2>
+            <p class="services__descr" data-lang="services__descr-primary">
+              Внедряем бизнес-решения локальных и глобальных вендоров. Помогаем адаптировать технологии RPA, Low-Code и No-Code для вашего бизнеса.
+            </p>
+            <a href="#" class="services__link link link--pink" data-lang="services__link-primary">
+              Подробнее о сервисе
+            </a>
+            <div class="services__buttons">
+              <button class="services__btn btn-rounded btn-reset btn-primary" aria-label="автоматизация процессов" data-lang="btn-primary-1">автоматизация процессов</button>
+              <button class="services__btn btn-rounded btn-reset btn-primary" aria-label="роботизация процессов" data-lang="btn-primary-2">роботизация процессов</button>
+              <button class="services__btn btn-rounded btn-reset btn-primary" aria-label="управление контентом"data-lang="btn-primary-3">управление контентом</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide swiper-slide--blue">
+            <h2 class="services__right-subtitle" data-lang="services__subtitle-blue">
+              Деловые приложения
+            </h2>
+            <p class="services__descr" data-lang="services__descr-blue">
+              Внедряем бизнес-решения локальных и глобальных вендоров. Помогаем адаптировать технологии RPA, Low-Code и No-Code для вашего бизнеса.
+            </p>
+            <a href="#" class="services__link link link--pink" data-lang="services__link-blue">
+              Подробнее о сервисе
+            </a>
+            <div class="services__buttons">
+              <button class="services__btn btn-rounded btn-reset btn-blue" aria-label="автоматизация процессов" data-lang="btn-blue-1">автоматизация процессов</button>
+              <button class="services__btn btn-rounded btn-reset btn-blue" aria-label="роботизация процессов" data-lang="btn-blue-2">роботизация процессов</button>
+              <button class="services__btn btn-rounded btn-reset btn-blue" aria-label="управление контентом" data-lang="btn-blue-3">управление контентом</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide swiper-slide--orange">
+            <h2 class="services__right-subtitle"  data-lang="services__subtitle-orange">
+              Деловые приложения
+            </h2>
+            <p class="services__descr" data-lang="services__descr-orange">
+              Внедряем бизнес-решения локальных и глобальных вендоров. Помогаем адаптировать технологии RPA, Low-Code и No-Code для вашего бизнеса.
+            </p>
+            <a href="#" class="services__link link link--pink" data-lang="services__link-orange">
+              Подробнее о сервисе
+            </a>
+            <div class="services__buttons">
+              <button class="services__btn btn-rounded btn-reset btn-orange" aria-label="автоматизация процессов" data-lang="btn-orange-1">автоматизация процессов</button>
+              <button class="services__btn btn-rounded btn-reset btn-orange" aria-label="роботизация процессов" data-lang="btn-orange-2">роботизация процессов</button>
+              <button class="services__btn btn-rounded btn-reset btn-orange" aria-label="управление контентом" data-lang="btn-orange-3">управление контентом</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide swiper-slide--green">
+            <h2 class="services__right-subtitle" data-lang="services__subtitle-green">
+              Деловые приложения
+            </h2>
+            <p class="services__descr" data-lang="services__descr-green">
+              Внедряем бизнес-решения локальных и глобальных вендоров. Помогаем адаптировать технологии RPA, Low-Code и No-Code для вашего бизнеса.
+            </p>
+            <a href="#" class="services__link link link--pink" data-lang="services__link-green">
+              Подробнее о сервисе
+            </a>
+            <div class="services__buttons">
+              <button class="services__btn btn-rounded btn-reset btn-green" aria-label="автоматизация процессов" data-lang="btn-green-1">автоматизация процессов</button>
+              <button class="services__btn btn-rounded btn-reset btn-green" aria-label="роботизация процессов" data-lang="btn-green-2">роботизация процессов</button>
+              <button class="services__btn btn-rounded btn-reset btn-green" aria-label="управление контентом" data-lang="btn-green-3">управление контентом</button>
+            </div>
+          </div>
+
+            <div class="swiper-slide swiper-slide--violet">
+              <h2 class="services__right-subtitle" data-lang="services__subtitle-violet">
+                Деловые приложения
+              </h2>
+              <p class="services__descr" data-lang="services__descr-violet">
+                Внедряем бизнес-решения локальных и глобальных вендоров. Помогаем адаптировать технологии RPA, Low-Code и No-Code для вашего бизнеса.
+              </p>
+              <a href="#" class="services__link link link--pink" data-lang="services__link-violet">
+                Подробнее о сервисе
+              </a>
+              <div class="services__buttons">
+                <button class="services__btn btn-rounded btn-reset btn-violet" aria-label="автоматизация процессов" data-lang="btn-violet-1">автоматизация процессов</button>
+                <button class="services__btn btn-rounded btn-reset btn-violet" aria-label="роботизация процессов" data-lang="btn-violet-2">роботизация процессов</button>
+                <button class="services__btn btn-rounded btn-reset btn-violet" aria-label="управление контентом" data-lang="btn-violet-3">управление контентом</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+      <section class="cases section-padding item">
+  <div class="cases__container container">
+    <h2 class="cases__subtitle subtitle">
+      Кейсы
+    </h2>
+    <div class="cases__grid grid">
+      <button class="cases__btn btn-rounded btn-reset btn-primary">управление данными</button>
+      <div class="cases__descr">
+        Внедрение корпоративной платформы данных
+      </div>
+      <p class="cases__text">
+        How DODUS X’s New Solution Revolutionizes Approaches in the DTEK Business Ecosystem
+      </p>
+      <div class="cases__logo">
+        <svg class="cases__icon cases__icon--dtek">
+          <use xlink:href="img/sprite.svg#dtek"></use>
+        </svg>
+      </div>
+      <div class="cases__image">
+        <img src="../img/pic1.png" width="250" height="250" alt="Логотип клиента Logo Ipsum" class="cases__img">
+      </div>
+      <a href="#" class="cases__link link link--pink">Смотреть кейс</a>
+    </div>
+    <div class="cases__grid grid">
+      <button class="cases__btn btn-rounded btn-reset btn-primary">Бизнес-приложения</button>
+      <div class="cases__descr">
+        Автоматизация процесса управления задолженностями
+      </div>
+      <p class="cases__text">
+        How DODUS X Automated Processes with Microsoft Power Platform for D.Solutions
+      </p>
+      <div class="cases__logo">
+        <svg class="cases__icon cases__icon--mvideo">
+          <use xlink:href="img/sprite.svg#mvideo"></use>
+        </svg>
+      </div>
+      <div class="cases__image">
+        <img src="../img/pic2.png" width="250" height="250" alt="Логотип клиента Logo Ipsum" class="cases__img">
+      </div>
+      <a href="#" class="cases__link link link--pink">Смотреть кейс</a>
+    </div>
+    <div class="cases__grid grid">
+      <button class="cases__btn btn-rounded btn-reset btn-primary">SPA</button>
+      <div class="cases__descr">
+        Оптимизация расчётов и отношений с клиентами
+      </div>
+      <p class="cases__text">
+        Цифровая трансформация оператора системы распределения: чего ожидать клиентам? Кейс DODUS X для электросети
+      </p>
+      <div class="cases__logo">
+        <svg class="cases__icon cases__icon--avion">
+          <use xlink:href="img/sprite.svg#avion"></use>
+        </svg>
+      </div>
+      <div class="cases__image">
+        <img src="../img/pic3.png" width="250" height="250" alt="Логотип клиента Logo Ipsum" class="cases__img">
+      </div>
+      <a href="#" class="cases__link link link--pink">Смотреть кейс</a>
+    </div>
+    <button class="cases__button btn btn-reset btn-primary">
+      Посмотреть все
+    </button>
+  </div>
+</section>
+
+      <section class="reviews section-padding item">
+  <div class="reviews__container container">
+    <button class="next-slide btn-reset">
+      <img src="../img/arrow-right.svg" alt="Стрелка вправо для переключения слайдов">
+    </button>
+    <h2 class="reviews__subtitle subtitle" data-lang="reviews__subtitle">
+      Клиенты о нас
+    </h2>
+    <div class="swiper swiper-reviews">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="reviews__item">
+            <svg class="reviews__icon">
+              <use xlink:href="img/sprite.svg#dtek"></use>
+              </svg>
+              <div class="reviews__img">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="../img/client05_1.jpg, ../client05_1_2x.jpg">
+                  <img class="reviews__pic" src="../img/client1.jpg" srcset="../img/client1_2x.jpg" width="692" height="947">
+                </picture>
+              </div>
+            <div class="reviews__content reviews__content--bg-dt">
+              <div class="reviews__descr" data-lang="reviews__descr-sl-1">
+                Dodus X — это настоящие профессионалы, которые знают своё дело!
+              </div>
+              <p class="reviews__text" data-lang="reviews__text-sl-1">
+                Команда работает быстро, качественно и с невероятным вниманием к деталям. Особенно впечатлило, как оперативно решаются любые вопросы и предоставляются рекомендации.
+              </p>
+              <div class="reviews__client" data-lang="reviews__client-sl-1">
+                CEO Dtek
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="reviews__item">
+            <svg class="reviews__icon icon-mv">
+              <use xlink:href="img/sprite.svg#mvideo"></use>
+            </svg>
+            <div class="reviews__img">
+              <picture>
+                <source media="(max-width: 768px)" srcset="../img/client2_05.jpg">
+                <img class="reviews__pic" src="../img/client2.jpg" srcset="../img/client2_2x.jpg" width="692" height="947">
+              </picture>
+            </div>
+            <div class="reviews__content reviews__content--bg-mv">
+              <div class="reviews__descr" data-lang="reviews__descr-sl-2">
+                Dodus X — команда профессионалов, добивающихся выдающихся результатов!
+              </div>
+              <p class="reviews__text" data-lang="reviews__text-sl-2">
+                Команда работает быстро, качественно и с невероятным вниманием к деталям. Особенно впечатлило, как оперативно решаются любые вопросы и предоставляются рекомендации.
+              </p>
+              <div class="reviews__client" data-lang="reviews__client-sl-2">
+                CEO M-video
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="reviews__item">
+            <svg class="reviews__icon">
+              <use xlink:href="img/sprite.svg#avion"></use>
+            </svg>
+            <div class="reviews__img">
+              <picture>
+                <source media="(max-width: 768px)" srcset="../img/client3_05x.jpg">
+                <img class="reviews__pic" src="../img/client3.jpg" srcset="../img/client3_2x.jpg" width="692" height="947">
+              </picture>
+            </div>
+            <div class="reviews__content reviews__content--bg-av">
+              <div class="reviews__descr" data-lang="reviews__descr-sl-3">
+                Dodus X — команда экспертов, всегда достигающих отличных результатов!
+              </div>
+              <p class="reviews__text" data-lang="reviews__text-sl-3">
+                Команда Dоdus X работает оперативно, профессионально и с безупречным вниманием к деталям. Особенно впечатляет их умение быстро находить решения и предлагать полезные рекомендации.
+              </p>
+              <div class="reviews__client" data-lang="reviews__client-sl-3">
+                CEO AV
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="sponsors section-padding item">
+  <div class="sponsors__content">
+    <div class="sponsors__container container">
+        <div class="sponsors__item">
+          <img class="sponsors__img" src="../img/sponsors1.svg" aria-hidden="true">
+        </div>
+        <div class="sponsors__item">
+          <img class="sponsors__img" src="../img/sponsors2.svg" aria-hidden="true">
+        </div>
+        <div class="sponsors__item">
+          <img class="sponsors__img" src="../img/sponsors3.svg" aria-hidden="true">
+        </div>
+        <div class="sponsors__item">
+          <img class="sponsors__img" src="../img/sponsors4.svg" aria-hidden="true">
+        </div>
+        <div class="sponsors__item">
+          <img class="sponsors__img" src="../img/sponsors5.svg" aria-hidden="true">
+        </div>
+        <h2 class="sponsors__subtitle">
+          Партнеры:
+        </h2>
+    </div>
+  </div>
+</section>
+
+      <section class="insites section-padding item">
+  <div class="insites__container container">
+    <div class="insites__top">
+      <h2 class="insites__subtitle subtitle" data-lang="insites__subtitle-1">
+        Инсайты от наших клиентов
+      </h2>
+      <button class="insites__button btn-reset btn btn-primary" data-lang="insites__button-primary-1">Перейти в блог</button>
+    </div>
+    <div class="insites__bottom">
+      <div class="insites__post">
+        <div class="insites__content">
+          <div class="insites__inf">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#cross"></use>
+            </svg>
+            <div class="insites__details">
+              <span class="insites__label" data-lang="insites__label-1">Блог</span>
+              <span class="insites__date" data-lang="insites__date-1">Nov 22</span>
+              <span class="insites__separator">∣</span>
+              <span class="insites__reading-time" data-lang="insites__reading-time-1">4 min read</span>
+            </div>
+            <p class="insites__text" data-lang="insites__text-1">
+              How Not To Screw Up a Product: 7 Sins of a Product Manager
+            </p>
+          </div>
+          <p class="insites__desct" data-lang="insites__desct-1">
+            It’s no secret that digital products are driven by product managers. We asked our Head
+            of Product Management Lev Kuzmin about the secrets of creating and managing digital products,
+            as well as the main ‘sins’ to avoid when creating them.
+          </p>
+          <button class="insites__btn btn-rounded btn-primary" data-lang="btn-rounded-primary-1">Смотреть больше</button>
+        </div>
+        <picture>
+          <source media="(max-width: 375px)" srcset="../img/inside-mob.jpg">
+          <source media="(max-width: 768px)" srcset="../img/insite0_5.jpg">
+          <!-- <source media="(max-width: 1560px)" srcset="../img/insite0_5.jpg"> -->
+          <img  class="insites__pic" src="../img//insite1.jpg" srcset="../img/insite1_2x.jpg" width="600" height="600" alt="">
+        </picture>
+      </div>
+      <div class="insites__related-posts">
+        <div class="insites__item">
+          <div class="insites__details">
+            <span class="insites__label" data-lang="insites__label-2">Блог</span>
+            <span class="insites__date" data-lang="insites__date-2">Nov 22</span>
+            <span class="insites__separator">∣</span>
+            <span class="insites__reading-time" data-lang="insites__reading-time-2">4 min read</span>
+          </div>
+          <p class="insites__item-text" data-lang="insites__item-text-1">
+            Exploring AI-capabilities in Microsoft 365 | How to use Copilot in PowerPoint
+          </p>
+          <button class="insites__btn btn-rounded btn-primary" data-lang="btn-rounded-primary-2">Смотреть больше</button>
+        </div>
+        <div class="insites__item">
+          <div class="insites__details">
+            <span class="insites__label" data-lang="insites__label-3">Блог</span>
+            <span class="insites__date" data-lang="insites__date-3">Nov 22</span>
+            <span class="insites__separator">∣</span>
+            <span class="insites__reading-time" data-lang="insites__reading-time-3">4 min read</span>
+          </div>
+          <p class="insites__item-text" data-lang="insites__item-text-2">
+            Exploring AI-capabilities in Microsoft 365 | How to use Copilot in PowerPoint
+          </p>
+          <button class="insites__btn btn-rounded btn-primary" data-lang="btn-rounded-primary-3">Смотреть больше</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="news section-padding item">
+  <div class="news__container container">
+    <div class="news__top">
+      <h2 class="news__subtitle subtitle" data-lang="news__subtitle-1">
+        Новости
+      </h2>
+      <button class="news__button btn-reset btn btn-black" data-lang="news__button-black-1">Читать новини</button>
+    </div>
+    <div class="news__bottom">
+      <div class="news__related-posts">
+        <div class="news__item">
+          <div class="news__details">
+            <span class="news__label" data-lang="news__label-1">Блог</span>
+            <span class="news__date" data-lang="news__date-1">Nov 22</span>
+            <span class="news__separator">∣</span>
+            <span class="news__reading-time" data-lang="news__reading-time-1">4 min read</span>
+          </div>
+          <p class="news__item-text" data-lang="news__item-text-1">
+            DODUS X Joins SAP PartnerEdge Sell Program
+          </p>
+          <button class="news__btn btn-rounded btn-black" data-lang="news__btn-rounded-1">Смотреть больше</button>
+        </div>
+        <div class="news__item">
+          <div class="news__details">
+            <span class="news__label" data-lang="news__label-2">Блог</span>
+            <span class="news__date" data-lang="news__date-2">Nov 22</span>
+            <span class="news__separator">∣</span>
+            <span class="news__reading-time" data-lang="news__reading-time-2">4 min read</span>
+          </div>
+          <p class="news__item-text" data-lang="news__item-text-2">
+            Engineering: How Our Team Integrates Advanced Technologies into the Company’s Processes
+          </p>
+          <button class="news__btn btn-rounded btn-black" data-lang="news__btn-rounded-2">Смотреть больше</button>
+        </div>
+      </div>
+      <div class="news__post">
+        <div class="news__content">
+          <div class="news__inf">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#cross"></use>
+            </svg>
+            <div class="news__details">
+              <span class="news__label" data-lang="news__label-3">Блог</span>
+              <span class="news__date" data-lang="news__date-3">Nov 22</span>
+              <span class="news__separator">∣</span>
+              <span class="news__reading-time" data-lang="news__reading-time-3">4 min read</span>
+            </div>
+            <p class="news__text" data-lang="news__text-3">
+              Forecasting model for solar and wind power: a solution for accurate renewable energy predictions.
+            </p>
+          </div>
+          <p class="news__desct" data-lang="news__desct-1">
+            It’s no secret that digital products are driven by product managers. We asked our Head
+            of Product Management Lev Kuzmin about the secrets of creating and managing digital products,
+            as well as the main ‘sins’ to avoid when creating them.
+          </p>
+          <button class="news__btn btn-rounded btn-black" data-lang="news__btn-rounded-3">Смотреть больше</button>
+        </div>
+        <picture>
+          <source media="(max-width: 375px)" srcset="../img/news1-mobile.jpg">
+          <source media="(max-width: 768px)" srcset="../img/news1-05x.jpg">
+          <img  class="news__pic" src="../img/news1.jpg" srcset="../img/news1_2x.jpg" width="600" height="600" alt="">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="contacts section-padding item">
+  <div class="contacts__container container">
+    <div class="contacts__wrapper">
+      <div class="contacts__content">
+        <h2 class="contacts__subtitle subtitle" data-lang="contacts__subtitle-1">Контакты</h2>
+        <ul class="contacts__list list-reset">
+          <li class="contacts__item">
+            <strong>Email:</strong>
+             <a class="contacts__link" href="mailto:example@example.com">89dodus@gmail.com</a>
+            </li>
+          <li class="contacts__item">
+            <strong data-lang="contacts__item-phone-1">Phone:</strong> <a class="contacts__link" href="tel:+1234567890">+7 (234) 567-890</a>
+          </li>
+          <li class="contacts__item">
+            <strong data-lang="contacts__item-adress-1">Address:</strong>
+            <span class="contacts__adress" data-lang="contacts__adress-1">123 Ленина, Мариуполь</span>
+          </li>
+        </ul>
+      </div>
+      <div class="contacts__form">
+        <div class="contacts__form-sub subtitle" data-lang="contacts__form-sub-1">
+          Чем мы можем Вам помочь?
+        </div>
+        <form class="form" action="#">
+          <svg class="form__icon">
+            <use xlink:href="img/sprite.svg#cross"></use>
+          </svg>
+          <div class="form__container">
+              <div class="form__group">
+                <div class="input-wrapper">
+                  <label for="name" class="visually-hidden" data-lang="lable-form-1">Поле для ввода Имени</label>
+                  <span class="fake-placeholder" data-lang="fake-placeholder-1">Имя</span>
+                  <input id="name" type="text" class="form__input input-reset" data-lang="form__input-1">
+                </div>
+                <div class="input-wrapper">
+                  <label for="surname" class="visually-hidden" data-lang="surname-1">Поле для ввода Фамилия</label>
+                  <span class="fake-placeholder" data-lang="fake-placeholder-2">Фамилия</span>
+                  <input id="surname" type="text" class="form__input input-reset">
+                </div>
+              </div>
+              <div class="form__group">
+                <div class="input-wrapper">
+                  <label for="company-name" class="visually-hidden" data-lang="company-name-1">Поле для названия фирмы</label>
+                  <span class="fake-placeholder" data-lang="fake-placeholder-3">Название компании</span>
+                  <input id="company-name" type="text" class="form__input input-reset" >
+                </div>
+                <div class="input-wrapper">
+                  <label for="email" class="visually-hidden" data-lang="email-1">Поле для ввода почты</label>
+                  <span class="fake-placeholder">E-mail</span>
+                  <input id="email" type="text" class="form__input input-reset" >
+                </div>
+              </div>
+              <div class="form__group">
+                <div class="input-wrapper">
+                  <label for="message" class="visually-hidden" data-lang="message-1">Поле для ввода сообщения</label>
+                  <span class="fake-placeholder" data-lang="fake-placeholder-4">Ваше сообщение</span>
+                  <textarea id="message" class="form__input textarea input-reset"></textarea>
+                </div>
+              </div>
+              <div class="form__checkbox-group">
+                <label class="checkbox-lable">
+                  <input type="checkbox" class="checkbox">
+                  <span class="custom-checkbox" data-lang="custom-checkbox-1">Я согласен на обработку персональных данных</span>
+                </label>
+                <label class="checkbox-lable">
+                  <input type="checkbox" class="checkbox">
+                  <span class="custom-checkbox" data-lang="custom-checkbox-2">Я хочу получать рассылку</span>
+                </label>
+              </div>
+              <input type="submit" class="form__btn btn btn-primary" data-submit="submit-1" value="Отправить">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer section-padding item">
+  <div class="futer__container container">
+    <div class="footer__grid grid">
+      <div class="footer__column social-column">
+        <ul class="footer__list  list-reset">
+          <li class="footer__item "><a class="footer__link social-link" href="#">Linkedin</a></li>
+          <li class="footer__item "><a class="footer__link social-link" href="#">Facebook</a></li>
+          <li class="footer__item "><a class="footer__link social-link" href="#">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer__column examination-column">
+        <h3 class="footer__subtitle" data-lang="footer__subtitle-1">Экспертизы</h3>
+        <ul class="footer__list   list-reset">
+          <li class="footer__item "><a class="footer__link" data-lang="footer__link-1" href="#">Бизнес-приложения</a></li>
+          <li class="footer__item "><a class="footer__link" data-lang="footer__link-2" href="#">Программная инженерия</a></li>
+          <li class="footer__item "><a class="footer__link" data-lang="footer__link-3" href="#">Управление данными и ИИ</a></li>
+          <li class="footer__item "><a class="footer__link" data-lang="footer__link-4" href="#">Кибербезопасность</a></li>
+          <li class="footer__item "><a class="footer__link" data-lang="footer__link-5" href="#">Услуги SAP</a></li>
+        </ul>
+      </div>
+      <div class="footer__column company-column">
+        <h3 class="footer__subtitle" data-lang="footer__subtitle-2">Коипания</h3>
+        <ul class="footer__list  list-reset">
+          <li class="footer__item "><a class="footer__link" data-lang="footer__link-6" href="#">О компании</a></li>
+          <li class="footer__item "><a class="footer__link" data-lang="footer__link-7" href="#">ESG</a></li>
+          <li class="footer__item "><a class="footer__link" data-lang="footer__link-8" href="#">Карьера</a></li>
+          <li class="footer__item "><a class="footer__link" data-lang="footer__link-9" href="#">Вакансии</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__column contacts-column">
+        <ul class="footer__list  list-reset">
+          <li class="footer__item "><a class="footer__link" data-lang="footer__link-10" href="#">Кейсы</a></li>
+          <li class="footer__item "><a class="footer__link" data-lang="footer__link-11" href="#">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__column media-column">
+        <h3 class="footer__subtitle" data-lang="footer__subtitle-3">Медиацентр</h3>
+        <ul class="footer__list  list-reset">
+          <li class="footer__item "><a class="footer__link" data-lang="footer__link-12" href="#">Новости</a></li>
+          <li class="footer__item "><a class="footer__link" data-lang="footer__link-13" href="#">Блог</a></li>
+          <li class="footer__item "><a class="footer__link" data-lang="footer__link-14" href="#">Мероприятия</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">©copyright</p>
+      <p class="footer__botom-text" data-lang="footer__p-1">Политика конфиденциальности</p>
+     </div>
+  </div>
+</footer>
+
+    <div class="graph-modal">
+  <div class="graph-modal__container" aria-labelledby="modal-title" role="dialog" aria-modal="true"
+    data-graph-target="header-search" aria-describedby="modal-description">
+    <h2 id="modal-title" class="visually-hidden">Поиск</h2>
+    <p id="modal-description">Введите запрос для поиска по сайту.</p>
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <input class="graph-modal__input input-reset" placeholder="Search" type="search"  aria-label="Поле поиска">
+    </div>
+  </div>
+</div>
+
+  </div>
+</body>
+</html>

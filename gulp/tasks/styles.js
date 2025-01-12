@@ -10,7 +10,7 @@ import notify from 'gulp-notify';
 const sass = gulpSass(dartSass);
 
 export const styles = () => {
-  return app.gulp.src(app.paths.srcScss, { sourcemaps: !app.isProd })
+  return docs.gulp.src(docs.paths.srcScss, { sourcemaps: !docs.isProd })
     .pipe(plumber(
       notify.onError({
         title: "SCSS",
@@ -23,9 +23,9 @@ export const styles = () => {
       grid: true,
       overrideBrowserslist: ["last 5 versions"]
     }))
-    .pipe(gulpif(app.isProd, cleanCSS({
+    .pipe(gulpif(docs.isProd, cleanCSS({
       level: 2
     })))
-    .pipe(app.gulp.dest(app.paths.buildCssFolder, { sourcemaps: '.' }))
+    .pipe(docs.gulp.dest(docs.paths.buildCssFolder, { sourcemaps: '.' }))
     .pipe(browserSync.stream());
 };

@@ -4,7 +4,7 @@ import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
 
 export const scriptsBackend = () => {
-  return app.gulp.src(app.paths.srcMainJs)
+  return docs.gulp.src(docs.paths.srcMainJs)
     .pipe(plumber(
       notify.onError({
         title: "JS",
@@ -38,6 +38,6 @@ export const scriptsBackend = () => {
       console.error('WEBPACK ERROR', err);
       this.emit('end');
     })
-    .pipe(app.gulp.dest(app.paths.buildJsFolder))
+    .pipe(docs.gulp.dest(docs.paths.buildJsFolder))
     .pipe(browserSync.stream());
 }

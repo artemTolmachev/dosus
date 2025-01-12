@@ -3,7 +3,7 @@ import fileInclude from "gulp-file-include";
 import typograf from "gulp-typograf";
 
 export const htmlInclude = () => {
-  return app.gulp.src([`${app.paths.base.src}/*.html`])
+  return docs.gulp.src([`${docs.paths.base.src}/*.html`])
     .pipe(fileInclude({
       prefix: '@',
       basepath: '@file',
@@ -12,6 +12,6 @@ export const htmlInclude = () => {
     .pipe(typograf({
       locale: ['ru', 'en-US']
     }))
-    .pipe(app.gulp.dest(app.paths.base.build))
+    .pipe(docs.gulp.dest(docs.paths.base.build))
     .pipe(browserSync.stream());
 }

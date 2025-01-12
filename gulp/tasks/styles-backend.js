@@ -8,7 +8,7 @@ import notify from 'gulp-notify';
 const sass = gulpSass(dartSass);
 
 export const stylesBackend = () => {
-  return app.gulp.src(app.paths.srcScss)
+  return docs.gulp.src(docs.paths.srcScss)
     .pipe(plumber(
       notify.onError({
         title: "SCSS",
@@ -21,6 +21,6 @@ export const stylesBackend = () => {
       grid: true,
       overrideBrowserslist: ["last 5 versions"]
     }))
-    .pipe(app.gulp.dest(app.paths.buildCssFolder))
+    .pipe(docs.gulp.dest(docs.paths.buildCssFolder))
     .pipe(browserSync.stream());
 };

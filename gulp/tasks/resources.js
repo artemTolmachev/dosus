@@ -1,4 +1,4 @@
 export const resources = () => {
-  return app.gulp.src(`${app.paths.resourcesFolder}/**`, { encoding: false })
-    .pipe(app.gulp.dest(app.paths.base.build))
+  return docs.gulp.src(`${docs.paths.resourcesFolder}/**`, { encoding: false })
+    .pipe(docs.gulp.dest(docs.paths.base.build))
 }

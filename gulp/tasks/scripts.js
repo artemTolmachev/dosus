@@ -4,7 +4,7 @@ import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
 
 export const scripts = () => {
-  return app.gulp.src(app.paths.srcMainJs)
+  return docs.gulp.src(docs.paths.srcMainJs)
     .pipe(plumber(
       notify.onError({
         title: "JS",
@@ -12,7 +12,7 @@ export const scripts = () => {
       })
     ))
     .pipe(webpackStream({
-      mode: app.isProd ? 'production' : 'development',
+      mode: docs.isProd ? 'production' : 'development',
       output: {
         filename: 'main.js',
       },
@@ -32,12 +32,12 @@ export const scripts = () => {
           }
         }]
       },
-      devtool: !app.isProd ? 'source-map' : false
+      devtool: !docs.isProd ? 'source-map' : false
     }))
     .on('error', function (err) {
       console.error('WEBPACK ERROR', err);
       this.emit('end');
     })
-    .pipe(app.gulp.dest(app.paths.buildJsFolder))
+    .pipe(docs.gulp.dest(docs.paths.buildJsFolder))
     .pipe(browserSync.stream());
 }

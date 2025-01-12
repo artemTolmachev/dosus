@@ -4,7 +4,7 @@ import cheerio from 'gulp-cheerio';
 import replace from 'gulp-replace';
 
 export const svgSprites = () => {
-  return app.gulp.src(app.paths.srcSvg, { encoding: false })
+  return docs.gulp.src(docs.paths.srcSvg, { encoding: false })
     .pipe(
       svgmin({
         js2svg: {
@@ -32,5 +32,5 @@ export const svgSprites = () => {
         }
       },
     }))
-    .pipe(app.gulp.dest(app.paths.buildImgFolder));
+    .pipe(docs.gulp.dest(docs.paths.buildImgFolder));
 }

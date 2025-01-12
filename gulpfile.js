@@ -17,7 +17,7 @@ import { rewrite } from './gulp/tasks/rewrite.js';
 import { htmlMinify } from './gulp/tasks/html-minify.js';
 import { zipFiles } from './gulp/tasks/zip.js';
 
-global.app = {
+global.docs = {
   gulp,
   isProd: process.argv.includes('--build'),
   paths,
@@ -26,20 +26,20 @@ global.app = {
 const watcher = () => {
   browserSync.init({
     server: {
-      baseDir: `${app.paths.base.build}`
+      baseDir: `${docs.paths.base.build}`
     },
     notify: false,
     port: 3000,
   });
 
-  gulp.watch(app.paths.srcScss, styles);
-  gulp.watch(app.paths.srcFullJs, scripts);
-  gulp.watch(`${app.paths.srcPartialsFolder}/*.html`, htmlInclude);
-  gulp.watch(`${app.paths.base.src}/*.html`, htmlInclude);
-  gulp.watch(`${app.paths.resourcesFolder}/**`, resources);
-  gulp.watch(`${app.paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
-  gulp.watch(`${app.paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
-  gulp.watch(app.paths.srcSvg, svgSprites);
+  gulp.watch(docs.paths.srcScss, styles);
+  gulp.watch(docs.paths.srcFullJs, scripts);
+  gulp.watch(`${docs.paths.srcPartialsFolder}/*.html`, htmlInclude);
+  gulp.watch(`${docs.paths.base.src}/*.html`, htmlInclude);
+  gulp.watch(`${docs.paths.resourcesFolder}/**`, resources);
+  gulp.watch(`${docs.paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
+  gulp.watch(`${docs.paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
+  gulp.watch(docs.paths.srcSvg, svgSprites);
 }
 
 const dev = gulp.series(clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, watcher);

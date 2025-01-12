@@ -7,8 +7,8 @@ import plumber from 'gulp-plumber';
 const rootFolder = path.basename(path.resolve());
 
 export const zipFiles = () => {
-  deleteAsync([`${app.paths.base.build}/*.zip`]);
-  return app.gulp.src(`${app.paths.base.build}/**/*.*`, { encoding: false })
+  deleteAsync([`${docs.paths.base.build}/*.zip`]);
+  return docs.gulp.src(`${docs.paths.base.build}/**/*.*`, { encoding: false })
     .pipe(plumber(
       notify.onError({
         title: "ZIP",
@@ -16,5 +16,5 @@ export const zipFiles = () => {
       })
     ))
     .pipe(zip(`${rootFolder}.zip`))
-    .pipe(app.gulp.dest(app.paths.base.build));
+    .pipe(docs.gulp.dest(docs.paths.base.build));
 }

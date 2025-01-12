@@ -1,5 +1,5 @@
 import { deleteAsync } from 'del';
 
 export const clean = () => {
-  return deleteAsync(app.paths.base.build);
+  return deleteAsync(docs.paths.base.build);
 }
